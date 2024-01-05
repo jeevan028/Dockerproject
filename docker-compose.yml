@@ -1,0 +1,27 @@
+---
+version: "3.8"
+services:
+  movies:
+    image: jeevan028/moviesrepo:latest
+    ports:
+      - 91:80
+    deploy:
+      replicas: 3
+  train:
+    image: jeevan028/trainrepo:latest
+    ports:
+      - 92:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: jeevan028/rechargerepo:latest
+    ports:
+      - 93:80
+    deploy:
+      replicas: 3
+  dth:
+    image: jeevan028/dthrepo:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
